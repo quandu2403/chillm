@@ -89,11 +89,11 @@ function SignUp() {
           <h1
             className={` origin-left font-mono text-5xl font-medium text-white duration-300 `}
           >
-            ChillF&S
+            ChillM
           </h1>
         </div>
         {/* Register htmlForm */}
-        <div className="mx-4 mt-4 rounded-md bg-slate-100 px-8 py-6 text-left w-full sm:w-2/3 md:w-1/2 lg:w-1/3">
+        <div className="mx-4 mt-4 rounded-md bg-slate-100 px-8 py-6 text-left w-full md:w-3/4 lg:w-1/4 ">
           <form className="" onSubmit={handleSignUp}>
             <div className="mt-4">
               {/* <div>

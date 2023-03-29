@@ -62,12 +62,12 @@ function Login() {
       <div class="mt-8 flex items-center gap-x-5">
         <img src={logo} alt="Logo" class="w-32" />
         <h1 class="origin-left font-mono text-5xl font-medium text-white duration-300">
-          ChillF&S
+          ChillM
         </h1>
       </div>
       <form
         onSubmit={handleLogIn}
-        class="mx-4 mt-4 w-full sm:w-2/3 md:w-1/2 lg:w-1/3 rounded-md bg-slate-100 px-8 py-6 text-left"
+        class="mx-4 mt-4 w-full md:w-3/4 lg:w-1/4 rounded-md bg-slate-100 px-8 py-6 text-left"
       >
         <div class="form">
           <div class="mt-4">

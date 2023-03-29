@@ -58,9 +58,9 @@ function Details() {
   return (
     <>
       {isLoading ? (
-        <AiOutlineLoading3Quarters className="animate-spin text-white text-6xl relative left-[50%] top-[50%]" />
+        <AiOutlineLoading3Quarters className="animate-spin text-white text-6xl relative left-[45%] top-[45%]" />
       ) : (
-        <div className="overflow-y-hide w-full flex flex-col">
+        <div className="overflow-hide w-full flex flex-col">
           <div className="mb-24">
             <div className={`w-full h-[700px] duration-300  `}>
               <div className="absolute flex justify-start w-full h-[720px] bg-gradient-to-t from-black"></div>
@@ -70,22 +70,22 @@ function Details() {
                 alt={movie?.title || movie?.name}
               />
             </div>
-            <div className="absolute w-full top-[30%] p-[4x] md:p-8 flex flex-row justify-start">
-              <div className="ml-32 w-auto ">
+            <div className="absolute w-full lg:top-[30%] md:top-[10%] min-[280px]:top-24  p-[4x] md:p-8 flex flex-row justify-start">
+              <div className="xl:ml-36  w-auto ">
                 <img
-                  className={`object-cover w-[450px] rounded-lg`}
+                  className={`object-cover w-[450px] rounded-lg min-[280px]:hidden md:block`}
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt={movie?.title || movie?.name}
                 />
               </div>
-              <div className=" flex flex-col justify-center items-start w-full h-full ml-10 ">
-                <h1 className="text-6xl  text-white">
+              <div className=" flex flex-col justify-center items-start w-full h-full md:ml-10 ml-5 ">
+                <h1 className="text-5xl  text-white lg:w-3/4 min-[280px]:text-4xl">
                   {movie?.title || movie?.name}
                 </h1>
                 <div className="flex flex-row text-white  my-10">
                   {movie?.genres &&
                     movie.genres.map((genre, index) => (
-                      <div key={index} className="p-2 w-full">
+                      <div key={index} className="p-2  w-full">
                         {genre.name.length < 10 && (
                           <div className="w-[140px] bg-slate-300/40 p-2 rounded-full font-medium flex justify-center">
                             {genre.name}
@@ -94,15 +94,15 @@ function Details() {
                       </div>
                     ))}
                 </div>
-                <p className="text-gray-500 text-lg p-2">
+                <p className="text-gray-500 text-lg  p-2">
                   {movie?.release_date?.slice(0, -6) ||
                     movie?.first_air_date?.slice(0, -6)}
                 </p>
-                <p className="w-full md:max-w-[90%] lg:max-w-[70%] xl:max-w-[65%] text-gray-300 my-4 h-[7rem] p-2 text-xl ">
+                <p className="w-full md:max-w-[90%] lg:max-w-[70%] xl:max-w-[65%] min-[280px]:text-base text-gray-300 my-3 h-[7rem] p-2 text-xl ">
                   {truncateString(movie?.overview, 250)}
                 </p>
 
-                <div className=" rounded-lg text-xl  mt-6 ml-2 ">
+                <div className=" rounded-lg text-xl  min-[280px]:mt-8  ml-2 ">
                   <button
                     className="bg-red-700 hover:bg-red-500 text-white font-semibold py-2 px-4 border  border-transparent duration-200 rounded-lg shadow"
                     onClick={() => {
@@ -123,21 +123,21 @@ function Details() {
           </div>
 
           <div class="flex items-center py-4">
-            <span class="flex-shrink text-4xl text-white px-4  font-bold ml-20">
+            <span class="flex-shrink text-4xl text-white px-4  font-bold lg:ml-20 ">
               Cast
             </span>
 
             <div class="flex-grow h-px bg-gray-400 opacity-30"></div>
           </div>
           <div className=" flex flex-col justify-evenly bg-black w-auto top-[30%] relative ">
-            <div className="flex flex-row w-full justify-around">
+            <div className="flex flex-row w-full lg:px-28">
               {creadits.slice(0, 3).map((item) => (
-                <div className="flex flex-row p-6 hover:bg-slate-400/25 rounded-lg cursor-pointer duration-200">
+                <div className="flex flex-row p-3 hover:bg-slate-400/25 rounded-lg cursor-pointer duration-200">
                   <img
-                    className="w-20 h-20 object-cover rounded-full"
+                    className="w-20 h-20 min-[280px]:w-16 object-cover rounded-full"
                     src={`https://image.tmdb.org/t/p/w500/${item.profile_path}`}
                   />
-                  <div className="flex flex-col justify-center px-2 text-white">
+                  <div className="flex flex-col justify-center px-1 text-white lg:text-base min-[280px]:text-xs">
                     <p>{item.name}</p>
                     <p>{item.character}</p>
                   </div>
@@ -148,14 +148,14 @@ function Details() {
 
           {trailer.length > 0 && (
             <>
-              <div class="flex items-center py-4">
-                <span class="flex-shrink text-4xl text-white px-4  font-bold ml-20">
+              <div class="flex items-center py-4 cursor-pointer">
+                <span class="flex-shrink text-4xl text-white px-4  font-bold lg:ml-20">
                   Trailer
                 </span>
 
                 <div class="flex-grow h-px bg-gray-400 opacity-30"></div>
               </div>
-              <div className="flex flex-row w-3/4 relative left-24">
+              <div className="flex flex-row lg:w-3/4 w-full relative lg:left-24">
                 {trailer.map((item) => (
                   <div className="flex flex-row  p-2 hover:bg-slate-400/25 rounded-lg cursor-pointer duration-200">
                     <div
@@ -213,7 +213,7 @@ function Details() {
           )}
 
           <div class="flex items-center py-4">
-            <span class="flex-shrink text-4xl text-white px-4  font-bold ml-20">
+            <span class="flex-shrink text-4xl text-white px-4  font-bold lg:ml-20">
               You may like
             </span>
 

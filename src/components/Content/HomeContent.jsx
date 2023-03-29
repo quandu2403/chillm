@@ -88,7 +88,7 @@ function HomeContent() {
                 </div>
 
                 <div className="absolute w-full top-[15%] p-4 md:p-8 flex flex-col justify-start">
-                  <h1 className="text-2xl md:text-4xl font-bold w-[26rem] h-[4rem]  my-4">
+                  <h1 className="text-2xl md:text-4xl min-[280px]:w-[16rem] md:w-[26rem] font-bold  h-[4rem]  my-4">
                     {banner.title ? banner.title : movie?.title}
                   </h1>
                   <p className="text-gray-500 text-base my-4">
@@ -97,14 +97,14 @@ function HomeContent() {
                       : movie?.release_date &&
                         (movie?.release_date).slice(0, -6)}
                   </p>
-                  <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-300 my-4 h-[5rem]">
+                  <p className="w-full md:max-w-[70%] lg:max-w-[50%]  text-gray-300 md:my-4 min-[280px]:my-2  h-[5rem]">
                     {truncateString(
                       banner.overview ? banner.overview : movie?.overview,
                       150
                     )}
                   </p>
 
-                  <div className=" rounded-lg text-xl  my-2 ">
+                  <div className=" rounded-lg lg:text-xl min-[280px]:text-sm  md:my-2 min-[280px]:my-6  ">
                     <button
                       className="bg-red-700 hover:bg-red-500 text-white font-semibold py-2 px-4 border  border-transparent duration-200 rounded-lg shadow"
                       onClick={() => {
@@ -116,7 +116,7 @@ function HomeContent() {
                   </div>
                 </div>
 
-                <div className="fixed w-[400px] h-[200px] bottom-[-90px] right-0 rounded-xl">
+                <div className="fixed lg:w-[400px] min-[280px]:w-[300px]  h-[200px] bottom-[-90px] right-0 rounded-xl">
                   <ul
                     className=" p-10 h-full flex flex-row overflow-x-scroll scroll-smooth scrollbar-none "
                     ref={listRef}

@@ -45,17 +45,17 @@ function Movies() {
       ) : (
         <div className="flex flex-col justify-center">
           <div class="flex items-center py-2 my-6 ">
-            <span class="flex-shrink text-4xl px-2 text-white  font-bold ml-10">
+            <span class="flex-shrink text-4xl px-2 text-white  font-bold lg:ml-10">
               All Movies
             </span>
             <div className="flex-grow h-px bg-gray-400 opacity-30"></div>
           </div>
-          <div className="w-full px-20">
+          <div className="xl:w-[95%] w-full xl:px-20 md:px-15">
             <div className="scrollbar-none relative h-full w-full overflow-y-hidden scroll-smooth ">
               {movies.map((item, index) => (
                 <div
                   key={index}
-                  className=" relative inline-block w-[200px] cursor-pointer p-6 hover:scale-110 duration-300 overflow-hidden"
+                  className=" relative inline-block xl:w-[240px] lg:w-[230px] md:w-[240px] min-[280px]:w-[180px] min-[1180px]:w-[200px] min-[1024px]:w-[210px] cursor-pointer p-6 hover:scale-110 duration-300 overflow-hidden"
                   onClick={() =>
                     navigate(`/${item?.media_type || "movie"}/${item.id}`)
                   }
@@ -91,7 +91,7 @@ function Movies() {
           </div>
           <button
             onClick={loadMore}
-            className="w-[150px] bg-slate-200/70 relative left-1/2 -translate-x-1/2 p-2 my-2 rounded-xl duration-300 opacity-50 hover:opacity-100"
+            className="w-[150px] bg-slate-200/70 relative left-5 lg:left-24 p-2 my-2 rounded-xl duration-300 opacity-50 hover:opacity-100"
           >
             Load More
           </button>

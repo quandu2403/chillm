@@ -55,7 +55,7 @@ function ModalSearch({ open, onClose }) {
   if (!open) return null;
   return createPortal(
     <div className="fixed inset-0 flex items-center justify-center  bg-black bg-opacity-50 backdrop-blur-sm ">
-      <div class=" h-[90vh] w-1/3  ">
+      <div class=" h-[90vh] lg:w-1/3 min-[280px]:w-full  ">
         {
           <div class="relative rounded-lg bg-white shadow dark:bg-black-sidebar">
             <div class="flex items-center justify-between  p-4 dark:border-gray-600">

@@ -27,7 +27,7 @@ function RowDetails({ category, id }) {
   };
 
   return (
-    <div className="mt-5 ml-24">
+    <div className="mt-5 lg:ml-24">
       <div className="group  flex w-auto  flex-grow flex-col  items-center overflow-hidden">
         <MdChevronLeft
           onClick={slideLeft}

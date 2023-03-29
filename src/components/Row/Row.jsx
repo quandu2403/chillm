@@ -33,7 +33,7 @@ function Row({ id, title, fetchMovies }) {
   };
 
   return (
-    <div className="mt-5 ml-6">
+    <div className="mt-5 lg:ml-6 overflow-hidden">
       <div className="flex items-center">
         <p className="p-3 ml-7 font-bold text-3xl text-white flex-shrink">
           {title}
@@ -43,7 +43,7 @@ function Row({ id, title, fetchMovies }) {
       <div className="group  flex w-auto  flex-grow flex-col  items-center overflow-hidden">
         <MdChevronLeft
           onClick={slideLeft}
-          className="absolute left-6 mt-32 z-10  hidden cursor-pointer rounded-full bg-white opacity-50 group-hover:block hover:opacity-100"
+          className=" absolute left-6 mt-32 z-10  hidden cursor-pointer rounded-full bg-white opacity-50 group-hover:block hover:opacity-100"
           size={40}
         />
         <div

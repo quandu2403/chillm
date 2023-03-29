@@ -6,8 +6,8 @@ function HomeLayout({ children }) {
     <div className="flex h-screen ">
       <Sidebar />
       <div className="flex flex-col flex-1 overflow-hidden bg-black">
-        {/* <Navbar /> */}
-        <div className="flex-1 relative left-[7rem] w-11/12 overflow-y-auto m-auto ">
+        <Navbar />
+        <div className="flex-1 relative lg:left-[12rem] min-[280px]:left-0 w-full overflow-y-auto overflow-x-hidden m-auto ">
           {children}
         </div>
       </div>

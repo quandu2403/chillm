@@ -106,7 +106,7 @@ function ModalSearch({ open, onClose }) {
                           {item.original_title || item.original_name}
                         </h1>
 
-                        <span className=" ml-8 flex text-base text-gray-500 text-sm">
+                        <span className=" ml-8 flex text-base text-gray-500 min-[280px]:text-sm">
                           {item.title || item.name} (
                           {(item?.release_date &&
                             item.release_date.slice(0, -6)) ||

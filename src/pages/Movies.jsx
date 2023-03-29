@@ -50,7 +50,7 @@ function Movies() {
             </span>
             <div className="flex-grow h-px bg-gray-400 opacity-30"></div>
           </div>
-          <div className="xl:w-[95%] w-full xl:px-20 md:px-15">
+          <div className="xl:w-[95%] w-full xl:px-24 md:px-15">
             <div className="scrollbar-none relative h-full w-full overflow-y-hidden scroll-smooth ">
               {movies.map((item, index) => (
                 <div

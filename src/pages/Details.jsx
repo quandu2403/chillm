@@ -102,7 +102,7 @@ function Details() {
                   {truncateString(movie?.overview, 250)}
                 </p>
 
-                <div className=" rounded-lg text-xl  min-[280px]:mt-8  ml-2 ">
+                <div className=" rounded-lg text-xl  min-[280px]:mt-12  ml-2 ">
                   <button
                     className="bg-red-700 hover:bg-red-500 text-white font-semibold py-2 px-4 border  border-transparent duration-200 rounded-lg shadow"
                     onClick={() => {

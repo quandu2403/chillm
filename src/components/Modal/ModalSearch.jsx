@@ -102,11 +102,11 @@ function ModalSearch({ open, onClose }) {
                         alt={item.original_title || item.original_name}
                       />
                       <div className="flex flex-col items-start justify-evenly">
-                        <h1 className=" ml-7 flex p-1 text-2xl">
+                        <h1 className=" ml-7 flex p-1 text-2xl min-[280px]:text-xl">
                           {item.original_title || item.original_name}
                         </h1>
 
-                        <span className=" ml-8 flex text-base text-gray-500">
+                        <span className=" ml-8 flex text-base text-gray-500 text-sm">
                           {item.title || item.name} (
                           {(item?.release_date &&
                             item.release_date.slice(0, -6)) ||

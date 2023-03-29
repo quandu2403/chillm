@@ -7,7 +7,7 @@ function HomeLayout({ children }) {
       <Sidebar />
       <div className="flex flex-col flex-1 overflow-hidden bg-black">
         {/* <Navbar /> */}
-        <div className="flex-1 relative left-[7.4rem] w-11/12 overflow-y-auto m-auto ">
+        <div className="flex-1 relative left-[7rem] w-11/12 overflow-y-auto m-auto ">
           {children}
         </div>
       </div>

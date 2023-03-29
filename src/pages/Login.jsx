@@ -57,70 +57,65 @@ function Login() {
   };
 
   return (
-    <div>
-      <div className="flex h-screen flex-col items-center justify-center bg-black-sidebar">
-        <Toaster position="top-right" />
-        <div className=" mt-8 flex items-center gap-x-5">
-          <img src={logo} alt="Logo" className={` w-32`} />
-          <h1
-            className={` origin-left font-mono text-5xl font-medium text-white duration-300 `}
-          >
-            ChillF&S
-          </h1>
-        </div>
-        {/* Register htmlForm */}
-        <form
-          onSubmit={handleLogIn}
-          className="mx-4 mt-4 w-1/4 rounded-md bg-slate-100 px-8 py-6 text-left"
-        >
-          <div className="form">
-            <div className="mt-4">
-              <div className="mt-4">
-                <label className="block" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  className="mt-2 w-full rounded-md border px-4 py-2 focus:outline-none focus:ring-1 focus:ring-blue-600"
-                  type="email"
-                  placeholder="Email address"
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
-                  onKeyDown={handlePasswordKeyDown}
-                  autoComplete="email"
-                />
-              </div>
-              <div className="mt-4">
-                <label className="block">Password</label>
-                <input
-                  className="mt-2 w-full rounded-md border px-4 py-2 focus:outline-none focus:ring-1 focus:ring-blue-600"
-                  type="password"
-                  placeholder="Password"
-                  onChange={(e) => {
-                    setPassword(e.target.value);
-                  }}
-                  onKeyDown={handlePasswordKeyDown}
-                  autoComplete="current-password"
-                />
-              </div>
-              <div className="flex">
-                <button
-                  className="mt-4 w-full rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-900"
-                  type="submit"
-                >
-                  Login
-                </button>
-              </div>
-              <div className="text-grey-dark mt-6">
-                New to ChillF&S? &nbsp;
-                <Link className="text-blue-600 hover:underline" to="/signup">
-                  SignUp
-                </Link>
-              </div>
+    <div class="flex h-screen flex-col items-center justify-center bg-black-sidebar">
+      <Toaster position="top-right" />
+      <div class="mt-8 flex items-center gap-x-5">
+        <img src={logo} alt="Logo" class="w-32" />
+        <h1 class="origin-left font-mono text-5xl font-medium text-white duration-300">
+          ChillF&S
+        </h1>
+      </div>
+      <form
+        onSubmit={handleLogIn}
+        class="mx-4 mt-4 w-full sm:w-2/3 md:w-1/2 lg:w-1/3 rounded-md bg-slate-100 px-8 py-6 text-left"
+      >
+        <div class="form">
+          <div class="mt-4">
+            <div class="mt-4">
+              <label class="block" for="email">
+                Email
+              </label>
+              <input
+                class="mt-2 w-full rounded-md border px-4 py-2 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                type="email"
+                placeholder="Email address"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                onKeyDown={handlePasswordKeyDown}
+                autoComplete="email"
+              />
+            </div>
+            <div class="mt-4">
+              <label class="block">Password</label>
+              <input
+                class="mt-2 w-full rounded-md border px-4 py-2 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                type="password"
+                placeholder="Password"
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
+                onKeyDown={handlePasswordKeyDown}
+                autoComplete="current-password"
+              />
+            </div>
+            <div class="flex">
+              <button
+                class="mt-4 w-full rounded-lg bg-blue-600 px-6 py-2 text-white hover:bg-blue-900"
+                type="submit"
+              >
+                Login
+              </button>
+            </div>
+            <div class="text-grey-dark mt-6">
+              New to ChillF&S? &nbsp;
+              <Link class="text-blue-600 hover:underline" to="/signup">
+                SignUp
+              </Link>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </div>
   );
 }

@@ -52,7 +52,7 @@ function Sidebar() {
   ];
   return (
     <aside
-      className={`w-[10%] fixed top-0 left-0 h-screen bg-black-sidebar p-5
+      className={`w-48 fixed top-0 left-0 h-screen bg-black-sidebar p-5
        pt-8 `}
     >
       <div

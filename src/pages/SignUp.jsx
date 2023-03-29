@@ -93,8 +93,8 @@ function SignUp() {
           </h1>
         </div>
         {/* Register htmlForm */}
-        <div className="mx-4 mt-4 w-1/4 rounded-md bg-slate-100 px-8 py-6 text-left">
-          <form onSubmit={handleSignUp}>
+        <div className="mx-4 mt-4 rounded-md bg-slate-100 px-8 py-6 text-left w-full sm:w-2/3 md:w-1/2 lg:w-1/3">
+          <form className="" onSubmit={handleSignUp}>
             <div className="mt-4">
               {/* <div>
                 <label className="block" htmlFor="Name">

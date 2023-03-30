@@ -122,7 +122,7 @@ function Details() {
             </div>
           </div>
 
-          <div class="flex items-center py-4">
+          <div class="flex items-center py-4 mt-4">
             <span class="flex-shrink text-4xl text-white px-4  font-bold lg:ml-20 ">
               Cast
             </span>
@@ -148,7 +148,7 @@ function Details() {
 
           {trailer.length > 0 && (
             <>
-              <div class="flex items-center py-4 cursor-pointer">
+              <div class="flex items-center py-4 cursor-pointer mt-4">
                 <span class="flex-shrink text-4xl text-white px-4  font-bold lg:ml-20">
                   Trailer
                 </span>
@@ -212,7 +212,7 @@ function Details() {
             </div>
           )}
 
-          <div class="flex items-center py-4">
+          <div class="flex items-center mt-5">
             <span class="flex-shrink text-4xl text-white px-4  font-bold lg:ml-20">
               You may like
             </span>

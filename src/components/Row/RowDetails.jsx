@@ -26,12 +26,20 @@ function RowDetails({ category, id }) {
     slider.scrollLeft = slider.scrollLeft + 500;
   };
 
+  const truncateString = (str, num) => {
+    if (str?.length > num) {
+      return str.slice(0, num) + "...";
+    } else {
+      return str;
+    }
+  };
+
   return (
-    <div className="mt-5 lg:ml-24">
-      <div className="group  flex w-auto  flex-grow flex-col  items-center overflow-hidden">
+    <div className="mt-2 lg:ml-16">
+      <div className="group  flex w-auto  flex-grow flex-col  justify-center items-center overflow-hidden">
         <MdChevronLeft
           onClick={slideLeft}
-          className="absolute left-20 mt-32 z-10  hidden cursor-pointer rounded-full bg-white opacity-50 group-hover:block hover:opacity-100"
+          className="absolute left-20  z-10  hidden cursor-pointer rounded-full bg-white opacity-50 group-hover:block hover:opacity-100"
           size={40}
         />
         <div
@@ -47,13 +55,13 @@ function RowDetails({ category, id }) {
               }}
             >
               <img
-                className="block h-auto rounded-xl"
+                className="block h-[230px] w-[160px] rounded-xl object-scale-down"
                 src={`https://image.tmdb.org/t/p/w500/${item?.poster_path}`}
                 alt={item?.title || item?.name}
               />
               <div className="relative top-0 left-0 h-full w-full text-white mt-2   ">
                 <p className="flex text-lg font-bold truncate ...">
-                  {item?.title || item?.name}
+                  {truncateString(item?.title || item?.name, 10)}
                 </p>
                 <div className="text-white flex flex-row justify-between items-center mt-1">
                   <div className="flex flex-row items-center">
@@ -64,7 +72,9 @@ function RowDetails({ category, id }) {
                   </div>
                   <div className="flex flex-row items-center">
                     <p className="font-bold">
-                      {item?.release_date || item?.first_air_date}
+                      {item?.release_date?.slice(0, -6) ||
+                        item?.first_air_date?.slice(0, -6) ||
+                        "2024"}
                     </p>
                   </div>
                 </div>
@@ -74,7 +84,7 @@ function RowDetails({ category, id }) {
         </div>
         <MdChevronRight
           onClick={slideRight}
-          className="absolute right-0 mt-32 z-10 hidden cursor-pointer rounded-full bg-white opacity-50 group-hover:block hover:opacity-100"
+          className="absolute right-48  z-10 hidden cursor-pointer rounded-full bg-white opacity-50 group-hover:block hover:opacity-100"
           size={40}
         />
       </div>

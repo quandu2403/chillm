@@ -87,7 +87,7 @@ function Row({ id, title, fetchMovies }) {
         </div>
         <MdChevronRight
           onClick={slideRight}
-          className="absolute right-0 mt-32 z-10 hidden cursor-pointer rounded-full bg-white opacity-50 group-hover:block hover:opacity-100"
+          className="absolute right-48 mt-32 z-10 hidden cursor-pointer rounded-full bg-white opacity-50 group-hover:block hover:opacity-100"
           size={40}
         />
       </div>

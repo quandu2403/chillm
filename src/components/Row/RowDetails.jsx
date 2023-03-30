@@ -59,7 +59,7 @@ function RowDetails({ category, id }) {
                   <div className="flex flex-row items-center">
                     <BsStarFill className="text-yellow-300 text-xs mr-1 " />
                     <div className=" bg-slate-500 px-[2px] h-full rounded-sm text-[10px] opacity-85 font-bold">
-                      <p>{(item?.vote_average).toFixed(1)}</p>
+                      <p>{item?.vote_average?.toFixed(1)}</p>
                     </div>
                   </div>
                   <div className="flex flex-row items-center">

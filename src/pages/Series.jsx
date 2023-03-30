@@ -55,7 +55,7 @@ function Series() {
               {movies.map((item, index) => (
                 <div
                   key={index}
-                  className=" relative inline-block xl:w-[240px] lg:w-[230px] md:w-[240px] min-[280px]:w-[180px] min-[1180px]:w-[200px] min-[1024px]:w-[210px] cursor-pointer p-6 hover:scale-110 duration-300 overflow-hidden"
+                  className=" relative inline-block xl:w-[240px] lg:w-[230px] md:w-[240px] min-[280px]:w-[180px] min-[1180px]:w-[200px] cursor-pointer p-6 hover:scale-110 duration-300 overflow-hidden"
                   onClick={() =>
                     navigate(`/${item?.media_type || "tv"}/${item.id}`)
                   }
